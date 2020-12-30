@@ -8,9 +8,13 @@ public class Main {
         try {
             File myObj = new File("sample.txt");
             Scanner myReader = new Scanner(myObj);
+            int[] numbers = new int[20];            
+            int counter = 0;
             while (myReader.hasNextLine()) {
               String data = myReader.nextLine();
-              System.out.println(data);
+              int num = Integer.parseInt(data); 
+              numbers[counter] = num;
+              counter++;
             }
             myReader.close();
           } catch (FileNotFoundException e) {
